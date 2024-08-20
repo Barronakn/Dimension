@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: Georgia, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+body::-webkit-scrollbar {
+    background-color: white;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+::selection {
+    background-color: white;
+    color: black;
+}
+
+::-moz-selection {
+    background-color: white;
+    color: black;
+}
+
+@layer components {
+    .navbar-link {
+        @apply uppercase md:text-base text-sm
+    }
+
+    nav ul li {
+        @apply px-6 py-3 hover:bg-white hover:bg-opacity-10 w-40 cursor-pointer text-center
+    }
+
+    .nav-fill {
+        @apply md:border-r border-b w-full border-white
+    }
+}
